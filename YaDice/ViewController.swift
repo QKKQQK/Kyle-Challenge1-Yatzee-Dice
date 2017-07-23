@@ -36,14 +36,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func dieTapped(_ sender: DieButton) {
-        sender.setTitle("\(sender.num!)", for: UIControlState.normal)
-        print("Tapped \(sender.num!)")
+        sender.frozen = !sender.frozen
+        if (sender.frozen) {
+            sender.backgroundColor = sender.frozenColor
+        } else {
+            sender.backgroundColor = sender.nonfrozenColor
+        }
     }
+    
     @IBAction func rollTapped(_ sender: UIButton) {
         for view in self.view.subviews as [UIView] {
             if let btn = view as? DieButton {
-                btn.num = arc4random_uniform(6) + 1
-                btn.setTitle("\(btn.num!)", for: .normal)
+                if (!btn.frozen) {
+                    btn.num = arc4random_uniform(6) + 1
+                    btn.setTitle("\(btn.num!)", for: .normal)
+                }
             }
         }
         sumLabel.text = "Sum: \(sum())"
