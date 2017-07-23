@@ -21,11 +21,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        sumLabel.text = "Sum: 0"
+        sumLabel.text = "Score: 0"
         for view in self.view.subviews as [UIView] {
             if let btn = view as? DieButton {
-                //btn.num = arc4random_uniform(6) + 1
-                btn.setTitle("\(btn.num!)", for: .normal)
+                btn.setTitle("\(btn.num)", for: .normal)
             }
         }
     }
@@ -49,19 +48,18 @@ class ViewController: UIViewController {
             if let btn = view as? DieButton {
                 if (!btn.frozen) {
                     btn.num = arc4random_uniform(6) + 1
-                    btn.setTitle("\(btn.num!)", for: .normal)
+                    btn.setTitle("\(btn.num)", for: .normal)
                 }
             }
         }
-        sumLabel.text = "Sum: \(sum())"
-        print(sum())
+        sumLabel.text = "Score: \(sum())"
     }
     
     func sum() -> UInt32 {
         var sumDice: UInt32 = 0;
         for view in self.view.subviews as [UIView] {
             if let btn = view as? DieButton {
-                sumDice += btn.num!
+                sumDice += btn.num
             }
         }
         return sumDice;
