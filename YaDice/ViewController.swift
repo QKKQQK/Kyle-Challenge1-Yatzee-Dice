@@ -10,11 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var die1Button: DieButton!
     @IBOutlet weak var die2Button: DieButton!
     @IBOutlet weak var die3Button: DieButton!
     @IBOutlet weak var die4Button: DieButton!
     @IBOutlet weak var die5Button: DieButton!
+    @IBOutlet weak var horizontalStack: UIStackView!
+    @IBOutlet weak var verticalStack1: UIStackView!
+    @IBOutlet weak var verticalStack2: UIStackView!
+    
     @IBOutlet weak var rollButton: UIButton!
     @IBOutlet weak var sumLabel: UILabel!
     
@@ -22,9 +27,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         sumLabel.text = "Score: 0"
-        for view in self.view.subviews as [UIView] {
-            if let btn = view as? DieButton {
-                btn.setTitle("\(btn.num)", for: .normal)
+        for view in horizontalStack.subviews {
+            if let sview = view as? UIStackView {
+                for ssview in sview.subviews{
+                    if let btn = ssview as? DieButton {
+                        btn.setTitle("\(btn.num)", for: .normal)
+                    }
+                }
             }
         }
     }
@@ -44,11 +53,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rollTapped(_ sender: UIButton) {
-        for view in self.view.subviews as [UIView] {
-            if let btn = view as? DieButton {
-                if (!btn.frozen) {
-                    btn.num = arc4random_uniform(6) + 1
-                    btn.setTitle("\(btn.num)", for: .normal)
+        for view in horizontalStack.subviews {
+            if let sview = view as? UIStackView {
+                for ssview in sview.subviews{
+                    if let btn = ssview as? DieButton {
+                        if (!btn.frozen) {
+                            btn.num = arc4random_uniform(6) + 1
+                            btn.setTitle("\(btn.num)", for: .normal)
+                        }
+                    }
                 }
             }
         }
@@ -57,9 +70,13 @@ class ViewController: UIViewController {
     
     func sum() -> UInt32 {
         var sumDice: UInt32 = 0;
-        for view in self.view.subviews as [UIView] {
-            if let btn = view as? DieButton {
-                sumDice += btn.num
+        for view in horizontalStack.subviews {
+            if let sview = view as? UIStackView {
+                for ssview in sview.subviews{
+                    if let btn = ssview as? DieButton {
+                        sumDice += btn.num
+                    }
+                }
             }
         }
         return sumDice;
