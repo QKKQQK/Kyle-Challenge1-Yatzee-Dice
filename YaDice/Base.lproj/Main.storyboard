@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,78 +14,142 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YaDice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km2-ff-tby" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
-                                <rect key="frame" x="40" y="357" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km2-ff-tby" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
+                                <rect key="frame" x="5" y="108.5" width="90" height="90"/>
                                 <color key="backgroundColor" red="0.38206607280666727" green="0.96590415434775012" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="2eI-NY-6Wj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="hFn-fN-lUM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                 <state key="normal" title="0"/>
                                 <connections>
                                     <action selector="dieTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c86-Ob-kCD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJd-J9-P3V" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
-                                <rect key="frame" x="142" y="357" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJd-J9-P3V" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
+                                <rect key="frame" x="115" y="108.5" width="90" height="90"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="L6h-to-kqV"/>
+                                    <constraint firstAttribute="height" constant="90" id="zAm-Lc-qAg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                 <state key="normal" title="0"/>
                                 <connections>
                                     <action selector="dieTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GlJ-1l-gpJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmg-3I-z44" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
-                                <rect key="frame" x="240" y="357" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmg-3I-z44" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
+                                <rect key="frame" x="225" y="108.5" width="90" height="90"/>
                                 <color key="backgroundColor" red="0.38206607279999999" green="0.96590415429999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="MDR-IR-PTz"/>
+                                    <constraint firstAttribute="height" constant="90" id="uQ0-dk-xpF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                 <state key="normal" title="0"/>
                                 <connections>
                                     <action selector="dieTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="41N-OB-Ehk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cix-Ro-TqF" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
-                                <rect key="frame" x="195" y="455" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSf-OU-QEa" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
+                                <rect key="frame" x="55" y="218.5" width="90" height="90"/>
                                 <color key="backgroundColor" red="0.38206607279999999" green="0.96590415429999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
-                                <state key="normal" title="0"/>
-                                <connections>
-                                    <action selector="dieTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rf0-DZ-fhC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSf-OU-QEa" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
-                                <rect key="frame" x="86" y="455" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.38206607279999999" green="0.96590415429999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="ZwR-H6-pJI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="veD-oh-KFn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                 <state key="normal" title="0"/>
                                 <connections>
                                     <action selector="dieTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fYz-3g-Rk5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXK-ja-Ob3">
-                                <rect key="frame" x="85" y="130" width="203" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cix-Ro-TqF" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
+                                <rect key="frame" x="175" y="218.5" width="90" height="90"/>
+                                <color key="backgroundColor" red="0.38206607279999999" green="0.96590415429999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="MuO-Ri-UYA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="o1H-XD-nVB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="dieTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rf0-DZ-fhC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z7-wh-gJg">
+                                <rect key="frame" x="68" y="40" width="184" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="71" id="LTr-s6-Ooy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="b8m-cr-N41"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXK-ja-Ob3">
+                                <rect key="frame" x="200" y="448" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.99246704578399658" green="0.62110097919660867" blue="0.54918164938272018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="fqQ-LK-hqx">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="gwZ-Yi-qh6">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="70"/>
+                                    </constraint>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Roll"/>
                                 <connections>
                                     <action selector="rollTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xf2-ya-5gi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z7-wh-gJg">
-                                <rect key="frame" x="71" y="51" width="232" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YJd-J9-P3V" firstAttribute="top" secondItem="9z7-wh-gJg" secondAttribute="bottom" constant="30" id="15h-Um-tld"/>
+                            <constraint firstItem="YJd-J9-P3V" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="AnG-qP-GeQ"/>
+                            <constraint firstItem="Cix-Ro-TqF" firstAttribute="top" secondItem="YJd-J9-P3V" secondAttribute="bottom" constant="20" id="B0D-JE-CC6"/>
+                            <constraint firstItem="hSf-OU-QEa" firstAttribute="top" secondItem="Km2-ff-tby" secondAttribute="bottom" constant="20" id="DQC-1w-sSn"/>
+                            <constraint firstItem="fmg-3I-z44" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="FqZ-eh-U3M"/>
+                            <constraint firstItem="Cix-Ro-TqF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="60" id="Gag-FA-xde"/>
+                            <constraint firstItem="9z7-wh-gJg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="JWp-TI-OkL">
+                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="fmg-3I-z44" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="110" id="Jak-OK-RTc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hXK-ja-Ob3" secondAttribute="bottom" constant="20" id="Jz4-nm-iRk"/>
+                            <constraint firstItem="Km2-ff-tby" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="K0C-tW-laV"/>
+                            <constraint firstItem="hSf-OU-QEa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-60" id="M5e-MW-uPy"/>
+                            <constraint firstItem="9z7-wh-gJg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XmR-wT-5pE"/>
+                            <constraint firstItem="9z7-wh-gJg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z6o-yE-fh8"/>
+                            <constraint firstItem="Km2-ff-tby" firstAttribute="top" secondItem="9z7-wh-gJg" secondAttribute="bottom" constant="30" id="fCS-gc-AtR"/>
+                            <constraint firstItem="fmg-3I-z44" firstAttribute="top" secondItem="9z7-wh-gJg" secondAttribute="bottom" constant="30" id="fzT-s2-2aA"/>
+                            <constraint firstItem="Km2-ff-tby" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-110" id="i6g-eJ-l5K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hXK-ja-Ob3" secondAttribute="trailing" constant="20" id="uUI-lF-4bS"/>
+                            <constraint firstItem="YJd-J9-P3V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vec-Ig-PLi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JWp-TI-OkL"/>
+                                <exclude reference="K0C-tW-laV"/>
+                                <exclude reference="AnG-qP-GeQ"/>
+                                <exclude reference="FqZ-eh-U3M"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="JWp-TI-OkL"/>
+                                <include reference="K0C-tW-laV"/>
+                                <include reference="AnG-qP-GeQ"/>
+                                <include reference="FqZ-eh-U3M"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="die1Button" destination="Km2-ff-tby" id="GOL-67-mO3"/>
