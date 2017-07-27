@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad12_9" orientation="landscape">
-        <adaptation id="fullscreen"/>
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="splitview1_3"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
@@ -14,34 +14,21 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YaDice" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                    <view key="view" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXK-ja-Ob3">
-                                <rect key="frame" x="1282" y="940" width="64" height="64"/>
-                                <color key="backgroundColor" red="0.99246704578399658" green="0.62110097919660867" blue="0.54918164938272018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="hXK-ja-Ob3" secondAttribute="height" multiplier="1:1" id="cqv-hw-RBF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Roll"/>
-                                <connections>
-                                    <action selector="rollTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xf2-ya-5gi"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1gH-5x-uyJ">
-                                <rect key="frame" x="536" y="416" width="294" height="192"/>
+                                <rect key="frame" x="60" y="600" width="255" height="166"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3AK-Bj-ydh">
-                                        <rect key="frame" x="0.0" y="0.0" width="294" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="77"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km2-ff-tby" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                 <color key="backgroundColor" red="0.38206607280666727" green="0.96590415434775012" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="UU4-mN-fMY"/>
-                                                    <constraint firstAttribute="height" constant="90" id="hPl-w3-sgN"/>
+                                                    <constraint firstAttribute="width" secondItem="Km2-ff-tby" secondAttribute="height" id="MPs-Mb-aMi"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                                 <state key="normal" title="0"/>
@@ -50,11 +37,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJd-J9-P3V" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
-                                                <rect key="frame" x="102" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="89" y="0.0" width="77" height="77"/>
                                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="WiO-ig-du8"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="Y7Z-xO-utI"/>
+                                                    <constraint firstAttribute="width" secondItem="YJd-J9-P3V" secondAttribute="height" multiplier="1:1" id="3zI-SU-gfG"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                                 <state key="normal" title="0"/>
@@ -63,11 +49,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmg-3I-z44" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
-                                                <rect key="frame" x="204" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="178" y="0.0" width="77" height="77"/>
                                                 <color key="backgroundColor" red="0.38206607279999999" green="0.96590415429999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="QL7-Dq-cxm"/>
-                                                    <constraint firstAttribute="height" constant="90" id="Rwg-fY-FKQ"/>
+                                                    <constraint firstAttribute="width" secondItem="fmg-3I-z44" secondAttribute="height" multiplier="1:1" id="V8a-JF-GHb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                                 <state key="normal" title="0"/>
@@ -78,14 +63,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="uxN-b7-Js8">
-                                        <rect key="frame" x="51" y="102" width="192" height="90"/>
+                                        <rect key="frame" x="44.5" y="89" width="166" height="77"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cix-Ro-TqF" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                 <color key="backgroundColor" red="0.38206607279999999" green="0.96590415429999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="a6x-HX-Jgm"/>
-                                                    <constraint firstAttribute="height" constant="90" id="qKh-D8-L7f"/>
+                                                    <constraint firstAttribute="width" secondItem="Cix-Ro-TqF" secondAttribute="height" id="OWo-hl-F3I"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                                 <state key="normal" title="0"/>
@@ -94,11 +78,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSf-OU-QEa" customClass="DieButton" customModule="YaDice" customModuleProvider="target">
-                                                <rect key="frame" x="102" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="89" y="0.0" width="77" height="77"/>
                                                 <color key="backgroundColor" red="0.38206607279999999" green="0.96590415429999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="63B-Yn-CtO"/>
-                                                    <constraint firstAttribute="height" constant="90" id="sNe-CS-Rco"/>
+                                                    <constraint firstAttribute="width" secondItem="hSf-OU-QEa" secondAttribute="height" id="tZe-Ha-abT"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                                 <state key="normal" title="0"/>
@@ -109,9 +92,14 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="hSf-OU-QEa" firstAttribute="width" secondItem="Km2-ff-tby" secondAttribute="width" id="34Z-x7-ldn"/>
+                                    <constraint firstItem="3AK-Bj-ydh" firstAttribute="width" secondItem="1gH-5x-uyJ" secondAttribute="height" multiplier="255:166" id="Jfv-kg-SBt"/>
+                                    <constraint firstItem="Cix-Ro-TqF" firstAttribute="width" secondItem="Km2-ff-tby" secondAttribute="width" id="QG7-C4-Ihk"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z7-wh-gJg">
-                                <rect key="frame" x="591" y="40" width="184" height="38.5"/>
+                                <rect key="frame" x="95.5" y="40" width="184" height="38.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="71" id="LTr-s6-Ooy"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="b8m-cr-N41"/>
@@ -120,18 +108,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-xn-1nw">
+                                <rect key="frame" x="0.0" y="1322" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Roll" width="1466" id="lCw-NP-EVm">
+                                        <connections>
+                                            <action selector="rollTapped:" destination="BYZ-38-t0r" id="tfr-hR-hAz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1gH-5x-uyJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2zy-da-aA3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hXK-ja-Ob3" secondAttribute="trailing" constant="20" id="ITG-8i-AUT"/>
                             <constraint firstItem="9z7-wh-gJg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="JWp-TI-OkL">
                                 <variation key="heightClass=compact-widthClass=compact" constant="20"/>
                             </constraint>
-                            <constraint firstItem="1gH-5x-uyJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LzE-P4-Pdr"/>
+                            <constraint firstItem="1gH-5x-uyJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KBj-uo-ytm"/>
+                            <constraint firstItem="1gH-5x-uyJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SS8-9p-TrD"/>
                             <constraint firstItem="9z7-wh-gJg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XmR-wT-5pE"/>
                             <constraint firstItem="9z7-wh-gJg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z6o-yE-fh8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hXK-ja-Ob3" secondAttribute="bottom" constant="20" id="jUk-UN-bjJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
@@ -152,7 +149,6 @@
                         <outlet property="die4Button" destination="Cix-Ro-TqF" id="rt8-XP-2DH"/>
                         <outlet property="die5Button" destination="hSf-OU-QEa" id="msK-L2-38F"/>
                         <outlet property="horizontalStack" destination="1gH-5x-uyJ" id="83R-Qv-pa8"/>
-                        <outlet property="rollButton" destination="hXK-ja-Ob3" id="8sU-05-xNr"/>
                         <outlet property="sumLabel" destination="9z7-wh-gJg" id="AOU-1v-N8L"/>
                         <outlet property="verticalStack1" destination="3AK-Bj-ydh" id="cuY-mo-V6p"/>
                         <outlet property="verticalStack2" destination="uxN-b7-Js8" id="JHy-N1-oAr"/>

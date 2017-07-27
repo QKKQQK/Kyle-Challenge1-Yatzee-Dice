@@ -20,13 +20,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var verticalStack1: UIStackView!
     @IBOutlet weak var verticalStack2: UIStackView!
     
-    @IBOutlet weak var rollButton: UIButton!
+    
+    
     @IBOutlet weak var sumLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        sumLabel.text = "Score: 0"
+        sumLabel.text = "Score: 30"
         for view in horizontalStack.subviews {
             if let sview = view as? UIStackView {
                 for ssview in sview.subviews{
@@ -52,7 +53,8 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func rollTapped(_ sender: UIButton) {
+    
+    @IBAction func rollTapped(_ sender: UIBarButtonItem) {
         for view in horizontalStack.subviews {
             if let sview = view as? UIStackView {
                 for ssview in sview.subviews{
@@ -66,7 +68,7 @@ class ViewController: UIViewController {
             }
         }
         sumLabel.text = "Score: \(sum())"
-    }
+    }    
     
     func sum() -> UInt32 {
         var sumDice: UInt32 = 0;
