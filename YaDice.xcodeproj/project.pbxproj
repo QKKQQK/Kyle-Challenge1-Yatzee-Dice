@@ -15,6 +15,7 @@
 		51DDAA411F21301D00B8860F /* YaDiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDAA401F21301D00B8860F /* YaDiceTests.swift */; };
 		51DDAA4C1F21301D00B8860F /* YaDiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDAA4B1F21301D00B8860F /* YaDiceUITests.swift */; };
 		51DDAA5A1F21327A00B8860F /* DieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDAA591F21327900B8860F /* DieButton.swift */; };
+		51E77B751F29AED700FCFE61 /* ForceTouchGestureRecongnizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E77B741F29AED700FCFE61 /* ForceTouchGestureRecongnizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		51DDAA4B1F21301D00B8860F /* YaDiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaDiceUITests.swift; sourceTree = "<group>"; };
 		51DDAA4D1F21301D00B8860F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51DDAA591F21327900B8860F /* DieButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DieButton.swift; sourceTree = "<group>"; };
+		51E77B741F29AED700FCFE61 /* ForceTouchGestureRecongnizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecongnizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				51DDAA321F21301D00B8860F /* Assets.xcassets */,
 				51DDAA341F21301D00B8860F /* LaunchScreen.storyboard */,
 				51DDAA371F21301D00B8860F /* Info.plist */,
+				51E77B741F29AED700FCFE61 /* ForceTouchGestureRecongnizer.swift */,
 			);
 			path = YaDice;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E77B751F29AED700FCFE61 /* ForceTouchGestureRecongnizer.swift in Sources */,
 				51DDAA2E1F21301D00B8860F /* ViewController.swift in Sources */,
 				51DDAA5A1F21327A00B8860F /* DieButton.swift in Sources */,
 				51DDAA2C1F21301D00B8860F /* AppDelegate.swift in Sources */,
@@ -532,6 +536,7 @@
 				51DDAA521F21301D00B8860F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51DDAA531F21301D00B8860F /* Build configuration list for PBXNativeTarget "YaDiceTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +545,7 @@
 				51DDAA551F21301D00B8860F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51DDAA561F21301D00B8860F /* Build configuration list for PBXNativeTarget "YaDiceUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +554,7 @@
 				51DDAA581F21301D00B8860F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

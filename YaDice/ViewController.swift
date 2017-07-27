@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
+    var cheating = false;
+    @IBOutlet weak var cheat: UIButton!
     @IBOutlet weak var die1Button: DieButton!
     @IBOutlet weak var die2Button: DieButton!
     @IBOutlet weak var die3Button: DieButton!
@@ -21,6 +22,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var verticalStack2: UIStackView!
     
     
+    func is3DTouchAvailable() -> Bool {
+        return self.traitCollection.forceTouchCapability == UIForceTouchCapability.available
+    }
     
     @IBOutlet weak var sumLabel: UILabel!
     
@@ -37,8 +41,19 @@ class ViewController: UIViewController {
                 }
             }
         }
+        let forceTouchGestureRecognizer = ForceTouchGestureRecognizer(target: self, action: #selector(forceTouchHandler(value:)), threshold: 0.75)
+        
+        cheat.addGestureRecognizer(forceTouchGestureRecognizer)
     }
 
+    @objc func forceTouchHandler(value: ForceTouchGestureRecognizer)
+    {
+        if value.state == UIGestureRecognizerState.ended
+        {
+            cheating = true;
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,20 +68,24 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func rollTapped(_ sender: UIBarButtonItem) {
         for view in horizontalStack.subviews {
             if let sview = view as? UIStackView {
                 for ssview in sview.subviews{
                     if let btn = ssview as? DieButton {
                         if (!btn.frozen) {
+                            if (!cheating) {
                             btn.num = arc4random_uniform(6) + 1
+                            } else{
+                                btn.num = 6
+                            }
                             btn.setTitle("\(btn.num)", for: .normal)
                         }
                     }
                 }
             }
         }
+        cheating = false
         sumLabel.text = "Score: \(sum())"
     }    
     
@@ -83,5 +102,6 @@ class ViewController: UIViewController {
         }
         return sumDice;
     }
+ 
 }
 
