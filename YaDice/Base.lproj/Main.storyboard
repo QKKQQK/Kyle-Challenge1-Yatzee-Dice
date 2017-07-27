@@ -122,12 +122,13 @@
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOq-1Y-Ksf">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="30"/>
+                                <color key="backgroundColor" red="0.038721333130606439" green="1" blue="0.055642120398797346" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="BVH-pq-cC9"/>
                                     <constraint firstAttribute="height" constant="30" id="b5T-gT-ucR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
-                                <state key="normal" title="@@@@@@">
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Cheat">
                                     <color key="titleColor" red="0.0" green="1" blue="0.19080444408632635" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>

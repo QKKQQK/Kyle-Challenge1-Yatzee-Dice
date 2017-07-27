@@ -43,7 +43,9 @@ class ViewController: UIViewController {
         }
         let forceTouchGestureRecognizer = ForceTouchGestureRecognizer(target: self, action: #selector(forceTouchHandler(value:)), threshold: 0.75)
         
-        cheat.addGestureRecognizer(forceTouchGestureRecognizer)
+        if (is3DTouchAvailable()) {
+            cheat.addGestureRecognizer(forceTouchGestureRecognizer)
+        }
     }
 
     @objc func forceTouchHandler(value: ForceTouchGestureRecognizer)
