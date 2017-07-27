@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="landscape">
+    <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YaDice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1gH-5x-uyJ">
-                                <rect key="frame" x="112.5" y="77" width="255" height="166"/>
+                                <rect key="frame" x="156.5" y="77" width="255" height="166"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3AK-Bj-ydh">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="77"/>
@@ -99,18 +98,8 @@
                                     <constraint firstItem="Cix-Ro-TqF" firstAttribute="width" secondItem="Km2-ff-tby" secondAttribute="width" id="QG7-C4-Ihk"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z7-wh-gJg">
-                                <rect key="frame" x="148" y="20" width="184" height="38.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="71" id="LTr-s6-Ooy"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="b8m-cr-N41"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-xn-1nw">
-                                <rect key="frame" x="0.0" y="276" width="480" height="44"/>
+                                <rect key="frame" x="0.0" y="276" width="568" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Roll" width="1466" id="lCw-NP-EVm">
@@ -120,43 +109,42 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOq-1Y-Ksf">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="30"/>
-                                <color key="backgroundColor" red="0.038721333130606439" green="1" blue="0.055642120398797346" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="BVH-pq-cC9"/>
-                                    <constraint firstAttribute="height" constant="30" id="b5T-gT-ucR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Cheat">
-                                    <color key="titleColor" red="0.0" green="1" blue="0.19080444408632635" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qf9-86-j0H">
+                                <rect key="frame" x="192" y="8" width="184" height="68.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOq-1Y-Ksf">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="30"/>
+                                        <color key="backgroundColor" red="0.044934989964113714" green="1" blue="0.069909480420254688" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="BVH-pq-cC9"/>
+                                            <constraint firstAttribute="height" constant="30" id="b5T-gT-ucR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                        <state key="normal" title="Cheat">
+                                            <color key="titleColor" red="0.00011550687603652394" green="0.60080901015228427" blue="0.11845382778635558" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z7-wh-gJg">
+                                        <rect key="frame" x="0.0" y="30" width="184" height="38.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="71" id="LTr-s6-Ooy"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="b8m-cr-N41"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="HOq-1Y-Ksf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" multiplier="0.5" id="8vH-bs-aiU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HOq-1Y-Ksf" secondAttribute="trailing" id="ERd-Av-q1S"/>
-                            <constraint firstItem="9z7-wh-gJg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="JWp-TI-OkL">
-                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
-                            </constraint>
+                            <constraint firstItem="Qf9-86-j0H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Py-O8-KTn"/>
                             <constraint firstItem="1gH-5x-uyJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KBj-uo-ytm"/>
                             <constraint firstItem="1gH-5x-uyJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SS8-9p-TrD"/>
-                            <constraint firstItem="9z7-wh-gJg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XmR-wT-5pE"/>
-                            <constraint firstItem="9z7-wh-gJg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z6o-yE-fh8"/>
-                            <constraint firstItem="HOq-1Y-Ksf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eXn-M1-GSe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Qf9-86-j0H" secondAttribute="top" constant="-8" id="tdZ-iB-qEk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="JWp-TI-OkL"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="JWp-TI-OkL"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="cheat" destination="HOq-1Y-Ksf" id="vfk-dG-ptm"/>
