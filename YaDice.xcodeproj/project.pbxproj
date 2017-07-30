@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51D5DE7A1F2D962400CEE857 /* diceSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51D5DE791F2D962400CEE857 /* diceSound.mp3 */; };
 		51DDAA2C1F21301D00B8860F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDAA2B1F21301D00B8860F /* AppDelegate.swift */; };
 		51DDAA2E1F21301D00B8860F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDAA2D1F21301D00B8860F /* ViewController.swift */; };
 		51DDAA311F21301D00B8860F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DDAA2F1F21301D00B8860F /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51D5DE791F2D962400CEE857 /* diceSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = diceSound.mp3; path = ../../../diceSound.mp3; sourceTree = "<group>"; };
 		51DDAA281F21301D00B8860F /* YaDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DDAA2B1F21301D00B8860F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51DDAA2D1F21301D00B8860F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				51DDAA591F21327900B8860F /* DieButton.swift */,
 				51DDAA2F1F21301D00B8860F /* Main.storyboard */,
 				51DDAA321F21301D00B8860F /* Assets.xcassets */,
+				51D5DE791F2D962400CEE857 /* diceSound.mp3 */,
 				51DDAA341F21301D00B8860F /* LaunchScreen.storyboard */,
 				51DDAA371F21301D00B8860F /* Info.plist */,
 				51E77B741F29AED700FCFE61 /* ForceTouchGestureRecongnizer.swift */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51DDAA361F21301D00B8860F /* LaunchScreen.storyboard in Resources */,
+				51D5DE7A1F2D962400CEE857 /* diceSound.mp3 in Resources */,
 				51DDAA331F21301D00B8860F /* Assets.xcassets in Resources */,
 				51DDAA311F21301D00B8860F /* Main.storyboard in Resources */,
 			);

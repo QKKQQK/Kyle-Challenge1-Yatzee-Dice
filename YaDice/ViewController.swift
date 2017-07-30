@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var player: AVAudioPlayer?
     var cheating = false;
     @IBOutlet weak var cheat: UIButton!
     @IBOutlet weak var die1Button: DieButton!
@@ -20,7 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var horizontalStack: UIStackView!
     @IBOutlet weak var verticalStack1: UIStackView!
     @IBOutlet weak var verticalStack2: UIStackView!
-    
+
     
     func is3DTouchAvailable() -> Bool {
         return self.traitCollection.forceTouchCapability == UIForceTouchCapability.available
@@ -71,11 +73,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rollTapped(_ sender: UIBarButtonItem) {
+        let url = Bundle.main.url(forResource: "diceSound", withExtension: "mp3")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            player.prepareToPlay()
+        } catch let error as NSError {
+            print(error.description)
+        }
+        
         for view in horizontalStack.subviews {
             if let sview = view as? UIStackView {
                 for ssview in sview.subviews{
                     if let btn = ssview as? DieButton {
                         if (!btn.frozen) {
+                            player!.play()
                             if (!cheating) {
                             btn.num = arc4random_uniform(6) + 1
                             } else{
