@@ -64,12 +64,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func dieTapped(_ sender: DieButton) {
-        sender.frozen = !sender.frozen
-        if (sender.frozen) {
-            sender.backgroundColor = sender.frozenColor
-        } else {
-            sender.backgroundColor = sender.nonfrozenColor
-        }
+        sender.toggleFrozen()
     }
     
     @IBAction func rollTapped(_ sender: UIBarButtonItem) {

@@ -21,4 +21,12 @@ class DieButton: UIButton {
         super.init(coder: aDecoder)
         self.layer.cornerRadius = 20.0;
     }
+    func toggleFrozen() {
+        self.frozen = !self.frozen
+        if (self.frozen) {
+            self.backgroundColor = self.frozenColor
+        } else {
+            self.backgroundColor = self.nonfrozenColor
+        }
+    }
 }
