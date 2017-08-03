@@ -78,6 +78,8 @@ class ViewController: UIViewController {
             print(error.description)
         }
         
+        var sumDice: UInt32 = 0;
+        
         for view in horizontalStack.subviews {
             if let sview = view as? UIStackView {
                 for ssview in sview.subviews{
@@ -91,27 +93,13 @@ class ViewController: UIViewController {
                             }
                             btn.setTitle("\(btn.num)", for: .normal)
                         }
-                    }
-                }
-            }
-        }
-        cheating = false
-        sumLabel.text = "Score: \(sum())"
-    }    
-    
-    func sum() -> UInt32 {
-        var sumDice: UInt32 = 0;
-        for view in horizontalStack.subviews {
-            if let sview = view as? UIStackView {
-                for ssview in sview.subviews{
-                    if let btn = ssview as? DieButton {
                         sumDice += btn.num
                     }
                 }
             }
         }
-        return sumDice;
+        cheating = false
+        sumLabel.text = "Score: \(sumDice)"
     }
- 
 }
 
