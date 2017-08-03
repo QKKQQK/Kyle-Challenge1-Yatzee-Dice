@@ -148,15 +148,13 @@
                     </view>
                     <connections>
                         <outlet property="cheat" destination="HOq-1Y-Ksf" id="vfk-dG-ptm"/>
-                        <outlet property="die1Button" destination="Km2-ff-tby" id="aHK-tS-dCZ"/>
-                        <outlet property="die2Button" destination="YJd-J9-P3V" id="TV2-Bv-zjK"/>
-                        <outlet property="die3Button" destination="fmg-3I-z44" id="3n0-tJ-0Mo"/>
-                        <outlet property="die4Button" destination="Cix-Ro-TqF" id="rt8-XP-2DH"/>
-                        <outlet property="die5Button" destination="hSf-OU-QEa" id="msK-L2-38F"/>
-                        <outlet property="horizontalStack" destination="1gH-5x-uyJ" id="83R-Qv-pa8"/>
+                        <outlet property="die1" destination="Km2-ff-tby" id="mUT-Dp-oXg"/>
+                        <outlet property="die2" destination="YJd-J9-P3V" id="9Y6-jB-M5I"/>
+                        <outlet property="die3" destination="fmg-3I-z44" id="dJN-k3-aFM"/>
+                        <outlet property="die4" destination="Cix-Ro-TqF" id="xF5-KQ-hhC"/>
+                        <outlet property="die5" destination="hSf-OU-QEa" id="A5H-N4-Shr"/>
+                        <outlet property="rollButton" destination="lCw-NP-EVm" id="FC9-wV-eLw"/>
                         <outlet property="sumLabel" destination="9z7-wh-gJg" id="AOU-1v-N8L"/>
-                        <outlet property="verticalStack1" destination="3AK-Bj-ydh" id="cuY-mo-V6p"/>
-                        <outlet property="verticalStack2" destination="uxN-b7-Js8" id="JHy-N1-oAr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

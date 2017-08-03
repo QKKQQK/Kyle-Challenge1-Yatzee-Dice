@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5152BE951F337A7C001C29B6 /* DiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5152BE941F337A7C001C29B6 /* DiceController.swift */; };
 		51D5DE7A1F2D962400CEE857 /* diceSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51D5DE791F2D962400CEE857 /* diceSound.mp3 */; };
 		51DDAA2C1F21301D00B8860F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDAA2B1F21301D00B8860F /* AppDelegate.swift */; };
 		51DDAA2E1F21301D00B8860F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDAA2D1F21301D00B8860F /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5152BE941F337A7C001C29B6 /* DiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceController.swift; sourceTree = "<group>"; };
 		51D5DE791F2D962400CEE857 /* diceSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = diceSound.mp3; path = ../../../diceSound.mp3; sourceTree = "<group>"; };
 		51DDAA281F21301D00B8860F /* YaDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DDAA2B1F21301D00B8860F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				51DDAA2B1F21301D00B8860F /* AppDelegate.swift */,
 				51DDAA2D1F21301D00B8860F /* ViewController.swift */,
 				51DDAA591F21327900B8860F /* DieButton.swift */,
+				5152BE941F337A7C001C29B6 /* DiceController.swift */,
 				51DDAA2F1F21301D00B8860F /* Main.storyboard */,
 				51DDAA321F21301D00B8860F /* Assets.xcassets */,
 				51D5DE791F2D962400CEE857 /* diceSound.mp3 */,
@@ -269,6 +272,7 @@
 				51E77B751F29AED700FCFE61 /* ForceTouchGestureRecongnizer.swift in Sources */,
 				51DDAA2E1F21301D00B8860F /* ViewController.swift in Sources */,
 				51DDAA5A1F21327A00B8860F /* DieButton.swift in Sources */,
+				5152BE951F337A7C001C29B6 /* DiceController.swift in Sources */,
 				51DDAA2C1F21301D00B8860F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

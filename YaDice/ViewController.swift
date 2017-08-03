@@ -14,15 +14,15 @@ class ViewController: UIViewController {
     var player: AVAudioPlayer?
     var cheating = false;
     @IBOutlet weak var cheat: UIButton!
-    @IBOutlet weak var die1Button: DieButton!
-    @IBOutlet weak var die2Button: DieButton!
-    @IBOutlet weak var die3Button: DieButton!
-    @IBOutlet weak var die4Button: DieButton!
-    @IBOutlet weak var die5Button: DieButton!
-    @IBOutlet weak var horizontalStack: UIStackView!
-    @IBOutlet weak var verticalStack1: UIStackView!
-    @IBOutlet weak var verticalStack2: UIStackView!
+    @IBOutlet weak var rollButton: UIBarButtonItem!
+    
+    @IBOutlet weak var die1: DieButton!
+    @IBOutlet weak var die2: DieButton!
+    @IBOutlet weak var die3: DieButton!
+    @IBOutlet weak var die4: DieButton!
+    @IBOutlet weak var die5: DieButton!
 
+    let dice = DiceController()
     
     func is3DTouchAvailable() -> Bool {
         return self.traitCollection.forceTouchCapability == UIForceTouchCapability.available
@@ -32,22 +32,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        sumLabel.text = "Score: 30"
-        for view in horizontalStack.subviews {
-            if let sview = view as? UIStackView {
-                for ssview in sview.subviews{
-                    if let btn = ssview as? DieButton {
-                        btn.setTitle("\(btn.num)", for: .normal)
-                    }
-                }
-            }
-        }
+        sumLabel.text = "Score: 0"
+        dice.diceArray = [die1, die2, die3, die4, die5]
         let forceTouchGestureRecognizer = ForceTouchGestureRecognizer(target: self, action: #selector(forceTouchHandler(value:)), threshold: 0.75)
         
         if (is3DTouchAvailable()) {
             cheat.addGestureRecognizer(forceTouchGestureRecognizer)
         }
+        dice.reset()
+        view.setNeedsDisplay()
     }
 
     @objc func forceTouchHandler(value: ForceTouchGestureRecognizer)
@@ -78,28 +71,10 @@ class ViewController: UIViewController {
             print(error.description)
         }
         
-        var sumDice: UInt32 = 0;
-        
-        for view in horizontalStack.subviews {
-            if let sview = view as? UIStackView {
-                for ssview in sview.subviews{
-                    if let btn = ssview as? DieButton {
-                        if (!btn.frozen) {
-                            player!.play()
-                            if (!cheating) {
-                            btn.num = arc4random_uniform(6) + 1
-                            } else{
-                                btn.num = 6
-                            }
-                            btn.setTitle("\(btn.num)", for: .normal)
-                        }
-                        sumDice += btn.num
-                    }
-                }
-            }
-        }
+        dice.rollDice(cheating)
         cheating = false
-        sumLabel.text = "Score: \(sumDice)"
+        sumLabel.text = "Score: \(dice.getScore())"
+        view.setNeedsDisplay()
     }
 }
 
