@@ -49,6 +49,8 @@ class DiceController {
             dice.backgroundColor = dice.nonfrozenColor
             dice.frozen = false;
         }
+        rollCount = 0
+        updateRollButtonTitle()
     }
     
     func getScore() -> UInt32 {
