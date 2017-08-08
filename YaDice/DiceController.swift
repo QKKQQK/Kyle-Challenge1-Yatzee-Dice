@@ -25,6 +25,10 @@ class DiceController {
         if diceArray.isEmpty {
             return
         }
+        if rollButtonTitle == "Reset" {
+            reset()
+            return
+        }
         for dice in diceArray {
             if (!dice.frozen) {
                 if cheating {
@@ -36,7 +40,7 @@ class DiceController {
             }
         }
         rollCount += 1
-        rollCount %= 3
+        rollCount %= 4
         updateRollButtonTitle()
     }
     
@@ -48,6 +52,7 @@ class DiceController {
             dice.num = 0
             dice.backgroundColor = dice.nonfrozenColor
             dice.frozen = false;
+            dice.setTitle("\(dice.num)", for: .normal)
         }
         rollCount = 0
         updateRollButtonTitle()
@@ -66,5 +71,8 @@ class DiceController {
     
     func updateRollButtonTitle() {
         rollButtonTitle = "Roll \(rollCount + 1)"
+        if rollCount == 3 {
+            rollButtonTitle = "Reset"
+        }
     }
 }
