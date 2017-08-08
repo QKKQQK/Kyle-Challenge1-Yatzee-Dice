@@ -11,11 +11,13 @@ import Foundation
 class DiceController {
     var diceCount: UInt32
     var rollButtonTitle: String
+    var rollCount: Int
     var diceArray: [DieButton]
     
     init() {
         diceCount = 5
         rollButtonTitle = "Roll"
+        rollCount = 0
         diceArray = []
     }
     
@@ -33,6 +35,9 @@ class DiceController {
                 dice.setTitle("\(dice.num)", for: .normal)
             }
         }
+        rollCount += 1
+        rollCount %= 3
+        updateRollButtonTitle()
     }
     
     func reset() {
@@ -55,5 +60,9 @@ class DiceController {
             sum += dice.num
         }
         return sum
+    }
+    
+    func updateRollButtonTitle() {
+        rollButtonTitle = "Roll \(rollCount + 1)"
     }
 }

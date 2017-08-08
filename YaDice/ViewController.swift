@@ -40,6 +40,7 @@ class ViewController: UIViewController {
             cheat.addGestureRecognizer(forceTouchGestureRecognizer)
         }
         dice.reset()
+        rollButton.title = dice.rollButtonTitle
         view.setNeedsDisplay()
     }
 
@@ -74,6 +75,7 @@ class ViewController: UIViewController {
         dice.rollDice(cheating)
         cheating = false
         sumLabel.text = "Score: \(dice.getScore())"
+        rollButton.title = dice.rollButtonTitle
         view.setNeedsDisplay()
     }
 }
